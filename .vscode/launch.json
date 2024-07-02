@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "delibox",
+            "request": "launch",
+            "type": "dart"
+        },
+        
+        {
+            "name": "delibox",
+            "cwd": "delibox",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "delibox (profile mode)",
+            "cwd": "delibox",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "delibox (release mode)",
+            "cwd": "delibox",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

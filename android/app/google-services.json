@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "547929549824",
+    "project_id": "delibox-36e5f",
+    "storage_bucket": "delibox-36e5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547929549824:android:d289abf08c9239ac09bce5",
+        "android_client_info": {
+          "package_name": "com.example.delibox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1vbsz_6yb169TBJyZ3WfXJJcrdarrnIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

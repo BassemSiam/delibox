@@ -1,0 +1,167 @@
+{
+    "create_account" : "انشاء حساب", 
+    "words_rigster" : "قم بملأ البيانات و انشاء حساب جديد",
+    "user_name" : "اسم المستخدم",
+    "brand_name" : "اسم البرند",
+    "phone_number" : "رقم الهاتف",
+    "email" : "البريد الالكترونى",
+    "password" : "كلمة المرور",
+    "rigister" : "تسجيل",
+    "thare_are_account" : "يوجد حساب بالفعل؟",
+    "signin" : "دخول",
+    "user_validator" : "يجب ادخال اسم المستخدم",
+    "brand_validator" : "يجب ادخال اسم البرند",
+    "phone_validator" : "يجب ادخال رقم الهاتف",
+    "phone_count_validator" : "يجب ان يكون رقم الهاتف 11 رقم صحيح",
+    "phone_fasle_validator" : "رقم الهاتف غير صحيح",
+    "email_validator" : "يجب ادخال البريد الالكترونى",
+    "email_fasle_validator" : "هذا البريد الالكترونى غير صحيح",
+    "password_validator" : "يجب ادخال كلمة المرور",
+    "email_already_in_use" : "عنوان البريد الإلكتروني مستخدم بالفعل",
+    "weak_password" : "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل",
+    "network_request_failed" : "لا يوجد اتصال بالانترنت",
+     
+ 
+ 
+ 
+ 
+    "login" : "دخول",
+    "words_login" : "قم بملأ البيانات لتسجيل الدخول",
+    "dont_are_account" : "لا يوجد حساب ؟",
+    "user_not_found" :"لم يتم العثور على المستخدم، حاول بحساب اخر",
+    "wrong_password" :"كلمة المرور خاطئة",
+    "too_many_requests" :"حاول مجددا فى وقت لاحق",
+
+
+
+
+    "New_orders" :"الطلبات الجديدة",
+    "accounting" :"تاريخ الطلبات",
+
+
+
+
+    "count_orders" :"عدد الطلبات",
+    "order_number" :"رقم الطلب",
+    "ask_delete_orders" :"هل تريد حذف طلب رقم",
+    "delete" :"حذف",
+    "delete_order" :"حذف طلب",
+    "customer_name" :"اسم العميل",
+    "customer_Phone" :"رقم العميل",
+    "number_of_pieces" :"عدد القطع",
+    "the_address" :"العنوان",
+    "governorate" :"محافظة",
+    "region" :"منطقة",
+    "street_name" :"اسم الشارع",
+    "building_number" :"رقم العقار",
+    "floor_number" :"الدور",
+    "apartment_number" :"رقم الشقة",
+    "Notes" :"ملاحظات",
+    "shipping_price" :"(مصاريف الشحن) ",
+    "total_amount" :"اجمالى السعر",
+    "order_code" :"كود الطلب",
+    "is_shipped" :"تم الشحن",
+    "Not_shipped" :"لم يتم الشحن",
+    "no_orders" :"لا يوجد طلبات",
+    "add_orders" :"اضغط على '+' لاضافة طلب جديد",
+
+
+    "add_customer_name" :"يجب ادخال اسم العميل",
+    "numer_order_validator" : "يجب ادخال عدد القطع",
+    "without_shipping" : " ( بدون الشحن )",
+    "price_order_validator" : "يجب ادخال السعر",
+    "address_Detailed" : "العنوان بالتفصيل",
+    "choose_governorate" : "اختار المحافظة",
+    "choose_governorate_validator" : "يجب اختيار المحافظة ",
+    "comments_chose" : "ملاحظات (اختيــــارى)",
+    "new_requast_added" : "تم اظافة طلب جديد",
+    "data_error" : "خطأ فى البيانات",
+    "add_order" : "اضافة طلب",
+    "region_validator" : "يجب ادخال اسم النطقة",
+    "street_name_validator" : "يجب ادخال اسم الشارع",
+    "building_validator" : "يجب ادخال رقم العقار",
+    "flor_validator" : "يجب ادخال رقم الدور",
+    "appartment_validator" : "يجب ادخال رقم الشقة",
+    
+
+
+
+
+    "date" : "التاريخ",
+    "count" : "العدد",
+    "price" : "السعر",
+    "no_accounting_now" : "لا يوجد طلبات الان للحساب",
+    "add_accountin_order" : "اضف طلب جديد",
+
+
+
+    "search_by_name" : "بحث باسم العميل",
+    "there_are_no_data_found" : "لم يتم العثور على نتائج",
+    "search_by_customer_name" : "ابحث باسم العميل لعرض بينات الطلب",
+    "pices" : "قطع",
+    "pound" : "جنيه",
+    "in_waiting" : "فى الانتظار",
+
+
+    "Edit_successfully" : "تم التعديل بنجاح",
+    "logout" : "خروج",
+    "log_out" : "تسجيل الخروج",
+    "do_you_want_to_logout" : "هل تريد تسجيل الخروج ؟",
+
+
+
+    "customers" : "العملاء",
+    "brand" : "البرند",
+    "orders" : "الطلب",
+
+
+
+    "No" : "لا",
+    "yes" : "نعم",
+
+    "order_deliverd" : "شحن الطلب",
+    "do_the_order_delivered" : "هل تم شحن الطلب",
+
+    "order_cancel" : "رفض الطلب",
+    "cancel" : "رفض",
+    "do_the_order_cancel" : "هل تم رفض الطلب",
+
+
+    "code_copy" : "تم نسخ كود الطلب",
+    "filter_by_governorate" : "اختار محافظة لعرض الطلبات",
+
+    "add_new_order_t" :"اضافة طلب جديد",
+    "add_new_order_b" :"لإضافة طلب جديد اضغط على '+' ",
+    "Add_order_t" :"اضافة طلب",
+    "Add_order_b" :"إدخال كافة المعلومات الخاصة بالعميل والطلب",
+    "Orders_t" :"طلبات",
+    "Orders_b" :"تتبع جميع الطلبات والحالة",
+    "Orders_Search_t" :"بحث الطلبات",
+    "Orders_Search_b" :"يمكنك البحث عن الطلبات حسب اسم العميل للحصول على كافة المعلومات الخاصة بالطلب",
+    "Accounting_t" :"محاسبة",
+    "Accounting_b" :"المحاسبة لجميع طلباتك يوما بعد يوم",
+    "profile_t" :"الحساب التعريفى",
+    "profile_b" :"ملفك الشخصي ويمكنك تحديث اسم العلامة التجارية أو البريد الإلكتروني أو الهاتف الخاص بمعلوماتك ",
+    "contact_us_t" :"تواصل بنا",
+    "contact_us_b" :"يمكنك تغيير لغة التطبيق ويمكنك الاتصال بنا في أي وقت",
+    "skip" : "تخطى",
+
+    "Select_Language" : " اختيار اللغة : ",
+    "error_network" : "يوجد مشكلة فى الانترنت , حاول فى وقت لاحق"
+    
+
+
+
+
+    
+    
+
+
+
+ 
+
+
+
+
+    
+ }

@@ -1,0 +1,153 @@
+{
+   "create_account" : "Create Account", 
+   "words_rigster" : "Fill in the data and create a new account",
+   "user_name" : "User Name",
+   "brand_name" : "Brand Name",
+   "phone_number" : "Phone Number",
+   "email" : "Email Address",
+   "password" : "Password",
+   "rigister" : "Rigister",
+   "thare_are_account" : "have an Account?",
+   "signin" : "Sign in",
+   "user_validator" : "You must enter the user name",
+   "brand_validator" : "You must enter the brand name",
+   "phone_validator" : "You must enter the phone Number",
+   "phone_count_validator" : "The phone number must be 11 valid digits",
+   "phone_fasle_validator" : "Phone number is incorrect",
+   "email_validator" : "You must enter an email",
+   "email_fasle_validator" : "This email is incorrect",
+   "password_validator" : "You must enter the Password",
+   "email_already_in_use" : "The email address is already in use",
+   "weak_password" : "The password must be at least 6 characters",
+   "network_request_failed" : "There is no internet connection",
+
+
+
+
+
+   "login" : "Login",
+   "words_login" : "Fill in the data to log in",
+   "dont_are_account" : "Don't have an account?",
+   "user_not_found" :"User not found, try with another account",
+   "wrong_password" :"The password is incorrect",
+   "too_many_requests" :"Try Again later",
+
+
+
+
+   "New_orders" :"New orders",
+   "accounting" :"Orders history",
+
+
+
+
+    "count_orders" :"Number of orders",
+    "order_number" :"Order number ",
+    "ask_delete_orders" :"Do you want to delete order number ",
+    "delete" :"Delete",
+    "delete_order" :"Delete order ",
+    "customer_name" :"Customer Name ",
+    "customer_Phone" :"Customer Phone",
+    "number_of_pieces" :"Number of pieces",
+    "the_address" :"Address",
+    "governorate" :"Governorate",
+    "region" :"Region",
+    "street_name" :"Street",
+    "building_number" :"Building",
+    "floor_number" :"floor",
+    "apartment_number" :"apartment",
+    "Notes" :"Notes",
+    "shipping_price" :"(shipping price ) ",
+    "total_amount" :"Total Price",
+    "order_code" :"Order Code",
+    "is_shipped" :"Shipped",
+    "Not_shipped" :"Cancel",
+    "no_orders" :"There are no Orders",
+    "add_orders" :"Click on '+' to add a new Orders",
+
+
+    "add_customer_name" :"You must enter the customer's name",
+    "numer_order_validator" : "You must enter the number of pieces",
+    "without_shipping" : " (without shipping)",
+    "price_order_validator" : "You must enter the price",
+    "address_Detailed" : "Detailed address",
+    "choose_governorate" : "Choose Governorate ",
+    "choose_governorate_validator" : "you must Choose Governorate",
+    "comments_chose" : "Notes (optional)",
+    "new_requast_added" : "A new Order has been added",
+    "data_error" : "Data error",
+    "add_order" : "Add Order",
+    "region_validator" : "You must enter a Region",
+    "street_name_validator" : "You must enter a Street Name",
+    "building_validator" : "You must enter building Number",
+    "flor_validator" : "You must enter floor Number",
+    "appartment_validator" : "You must ente apartment Number",
+
+
+
+
+    "date" : "Date",
+    "count" : "Number",
+    "price" : "Price",
+    "no_accounting_now" : "There are no orders for the account now",
+    "add_accountin_order" : "Add New Orders",
+   
+
+
+    
+    "search_by_name" : "Search by Name",
+    "there_are_no_data_found" : "No results found",
+    "search_by_customer_name" : "Search by customer name to view order information",
+    "pices" : "pices",
+    "pound" : "L.E",
+    "in_waiting" : "In waiting",
+
+
+    "Edit_successfully" : "Edit successfully",
+    "logout" : "Logout",
+    "log_out" : "Logout",
+    "do_you_want_to_logout" : "Do you want to Logout?",
+
+
+
+    "customers" : "customers",
+    "brand" : "brand",
+    "orders" : "orders",
+
+
+
+
+    "No" : "No",
+    "yes" : "yes",
+
+    "order_deliverd" : "order shipped",
+    "do_the_order_delivered" : "Has the order been shipped?",
+
+    "order_cancel" : "Order Cancel",
+    "cancel" : "Cancel",
+    "do_the_order_cancel" : "Has the order been rejected?",
+
+    "code_copy" : "The order code has been copied",
+    "filter_by_governorate" : "filter by governorate to view order information",
+
+
+    "add_new_order_t" :"add new order",
+    "add_new_order_b" :"to add new order click on '+' ",
+    "Add_order_t" :"Add order",
+    "Add_order_b" :"enter all information for the customer and the order",
+    "Orders_t" :"Orders",
+    "Orders_b" :"track all orders and status",
+    "Orders_Search_t" :"Orders Search ",
+    "Orders_Search_b" :"you can search for orders by customer name to get all information for the order",
+    "Accounting_t" :"Accounting",
+    "Accounting_b" :"Accounting for all you orders day by day",
+    "profile_t" :"Profile",
+    "profile_b" :"your profile and you can update brand name , email or phone of your infromation",
+    "contact_us_t" :"Contact us",
+    "contact_us_b" :"you can change the langauge of the app and you can contact us anytime",
+    "skip" : "Skip",
+
+    "Select_Language" : "Select Language : ",
+    "error_network" : "There is a problem with the Internet , try again later"
+    
+}
