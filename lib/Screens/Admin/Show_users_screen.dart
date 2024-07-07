@@ -3,6 +3,7 @@ import 'package:delibox/Screens/Admin/Show_Orders_screen.dart';
 import 'package:delibox/Screens/Admin/Users_Details_screen.dart';
 import 'package:delibox/components/components.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../Models/orderModel.dart';
 import '../../components/cash_helper.dart';
 import '../../generated/l10n.dart';
@@ -67,7 +68,7 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
         centerTitle: true,
         title: Text(
           S.of(context).customers,
-          style: const TextStyle(color: Colors.black, fontSize: 24),
+          style: TextStyle(color: Colors.black, fontSize: 16.sp),
         ),
         backgroundColor: Colors.transparent,
         actions: [
@@ -93,8 +94,8 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
             )
           : Column(
               children: [
-                const SizedBox(
-                  height: 15,
+                SizedBox(
+                  height: 15.h,
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 5),
@@ -107,17 +108,15 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                     children: [
                       Text(
                         S.of(context).customers,
-                        style:
-                            const TextStyle(color: Colors.white, fontSize: 22),
+                        style: TextStyle(color: Colors.white, fontSize: 16.sp),
                       ),
                       Text(
                         S.of(context).brand,
-                        style:
-                            const TextStyle(color: Colors.white, fontSize: 22),
+                        style: TextStyle(color: Colors.white, fontSize: 16.sp),
                       ),
                       Text(S.of(context).orders,
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 22)),
+                          style:
+                              TextStyle(color: Colors.white, fontSize: 16.sp)),
                     ],
                   ),
                 ),
@@ -165,22 +164,22 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                                             Expanded(
                                               child: Text(
                                                 usernames[index].toUpperCase(),
-                                                style: const TextStyle(
-                                                    fontSize: 18,
+                                                style: TextStyle(
+                                                    fontSize: 14.sp,
                                                     fontWeight:
                                                         FontWeight.bold),
                                                 maxLines: 2,
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             ),
-                                            const SizedBox(
-                                              width: 20,
+                                            SizedBox(
+                                              width: 25.w,
                                             ),
                                             Expanded(
                                               child: Text(
                                                 brandnames[index],
-                                                style: const TextStyle(
-                                                    fontSize: 16,
+                                                style: TextStyle(
+                                                    fontSize: 12.sp,
                                                     fontWeight:
                                                         FontWeight.w400),
                                                 maxLines: 2,
@@ -192,7 +191,7 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                                                 TextButton(
                                                   style: const ButtonStyle(
                                                       backgroundColor:
-                                                          MaterialStatePropertyAll(
+                                                          WidgetStatePropertyAll(
                                                               Color.fromARGB(
                                                                   255,
                                                                   156,
@@ -200,8 +199,8 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                                                                   182))),
                                                   child: Text(
                                                     orderCount.toString(),
-                                                    style: const TextStyle(
-                                                        fontSize: 22,
+                                                    style: TextStyle(
+                                                        fontSize: 14.sp,
                                                         color: Colors.white),
                                                   ),
                                                   onPressed: () {
@@ -226,7 +225,7 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
-                                                                          50),
+                                                                          20),
                                                               color:
                                                                   Colors.white),
                                                         ),
@@ -240,7 +239,7 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
-                                                                          50),
+                                                                          20),
                                                               color:
                                                                   Colors.red),
                                                         ),
@@ -256,7 +255,7 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                               });
                         },
                         separatorBuilder: (context, index) =>
-                            const SizedBox(height: 3),
+                            SizedBox(height: 1.h),
                         itemCount: usernames.length),
                   ),
                 ),

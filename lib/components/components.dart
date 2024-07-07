@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:delibox/components/cash_helper.dart';
 import 'package:delibox/components/const.dart';
@@ -5,8 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:lottie/lottie.dart';
-import 'package:quickalert/models/quickalert_type.dart';
-import 'package:quickalert/widgets/quickalert_dialog.dart';
 import '../generated/l10n.dart';
 import '../main.dart';
 import 'package:intl/intl.dart';
@@ -57,15 +57,17 @@ void navigateAndFinish(context, widget) => Navigator.pushAndRemoveUntil(
       return false;
     });
 
-void showSnackBar(BuildContext context, massage) {
-  QuickAlert.show(
-    context: context,
-    type: QuickAlertType.warning,
-    text: massage,
-    showConfirmBtn: false,
-    title: '',
-    autoCloseDuration: const Duration(seconds: 4),
-  );
+void showSnackBar(BuildContext context, String message) {
+  AwesomeDialog dialog = AwesomeDialog(
+      context: context,
+      dialogType: DialogType.warning,
+      title: message,
+      width: 350.w,
+      titleTextStyle: TextStyle(fontSize: 14.sp));
+  dialog.show();
+  Timer(const Duration(seconds: 3), () {
+    dialog.dismiss();
+  });
 }
 
 void showToast({required String text, required ToastStates state}) =>
@@ -103,16 +105,28 @@ showAlert(
   required String content,
   required void Function() onContinue,
 }) {
-  QuickAlert.show(
-      context: context,
-      type: QuickAlertType.confirm,
-      text: content,
-      title: title,
-      borderRadius: 30,
-      confirmBtnText: continueButtonText,
-      cancelBtnText: '        ${S.of(context).No}        ',
-      onConfirmBtnTap: onContinue,
-      confirmBtnColor: Colors.green);
+  AwesomeDialog(
+    showCloseIcon: true,
+    descTextStyle: TextStyle(fontSize: 14.sp),
+    titleTextStyle: TextStyle(fontSize: 16.sp),
+    context: context,
+    dialogType: DialogType.question,
+    desc: content,
+    title: title,
+    btnOkText: continueButtonText,
+    btnOkOnPress: onContinue,
+    btnOkColor: Colors.black,
+    width: 350.w,
+    btnCancel: TextButton(
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      child: Text(
+        S.of(context).No,
+        style: const TextStyle(color: Colors.black),
+      ),
+    ),
+  ).show();
 }
 
 class TextFiledOrder extends StatefulWidget {
@@ -243,30 +257,33 @@ doneAlert(
   context, {
   required String text,
 }) {
-  QuickAlert.show(
-    context: context,
-    type: QuickAlertType.success,
-    text: text,
-    showConfirmBtn: false,
-    borderRadius: 30,
-    title: '',
-    autoCloseDuration: const Duration(seconds: 3),
-  );
+  AwesomeDialog dialog = AwesomeDialog(
+      context: context,
+      dialogType: DialogType.success,
+      title: text,
+      width: 350.w,
+      titleTextStyle: TextStyle(fontSize: 14.sp));
+  dialog.show();
+  Timer(const Duration(seconds: 3), () {
+    dialog.dismiss();
+  });
 }
 
 cancelAlert(
   context, {
   required String text,
 }) {
-  QuickAlert.show(
-    context: context,
-    type: QuickAlertType.error,
-    text: text,
-    borderRadius: 50,
-    showConfirmBtn: true,
-    title: '',
-    confirmBtnColor: Colors.black,
-  );
+  AwesomeDialog(
+          titleTextStyle: TextStyle(fontSize: 14.sp),
+          context: context,
+          dialogType: DialogType.error,
+          title: text,
+          width: 350.w,
+          showCloseIcon: true,
+          btnOkOnPress: () => Navigator.pop(context),
+          btnOkColor: Colors.black,
+          btnOkText: S.of(context).ok)
+      .show();
 }
 
 class NoInternetScreen extends StatefulWidget {
@@ -290,28 +307,28 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
           Text(
             'No Internet Connection',
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 14.sp,
               fontWeight: FontWeight.bold,
               color: Colors.grey.shade800,
             ),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Text(
             'Please check your internet connection and try again.',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 14.sp,
               color: Colors.grey.shade600,
             ),
           ),
-          const SizedBox(
-            height: 8,
+          SizedBox(
+            height: 8.h,
           ),
           ElevatedButton(
             style: const ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(blueColor)),
+                backgroundColor: WidgetStatePropertyAll(Colors.red)),
             onPressed: () async {
               final Connectivity connectivity = Connectivity();
               connectivity.onConnectivityChanged
@@ -326,9 +343,9 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
                 }
               });
             },
-            child: const Text(
+            child: Text(
               'Retry',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white, fontSize: 12.sp),
             ),
           ),
         ],

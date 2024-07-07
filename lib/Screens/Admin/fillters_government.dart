@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import '../../Models/orderModel.dart';
@@ -103,7 +103,7 @@ class _FillterScreenState extends State<FillterScreen> {
           child: Column(
             children: [
               SizedBox(
-                height: 70,
+                height: 70.h,
                 child: SingleChildScrollView(
                   child: DropdownButtonFormField<String>(
                     decoration: InputDecoration(
@@ -120,10 +120,10 @@ class _FillterScreenState extends State<FillterScreen> {
                     isExpanded: true,
                     borderRadius: BorderRadius.circular(15),
                     dropdownColor: Colors.grey[300],
-                    iconSize: 18,
-                    style: const TextStyle(
+                    iconSize: 18.sp,
+                    style: TextStyle(
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.w300),
                     value: selectedGovernorate,
                     validator: (value) {
@@ -134,8 +134,8 @@ class _FillterScreenState extends State<FillterScreen> {
                     },
                     hint: Text(
                       S.of(context).choose_governorate,
-                      style: const TextStyle(
-                        fontSize: 16,
+                      style: TextStyle(
+                        fontSize: 12.sp,
                       ),
                     ),
                     onChanged: (newValue) {
@@ -194,13 +194,16 @@ class _FillterScreenState extends State<FillterScreen> {
                                     ),
                                     Text(
                                       S.of(context).there_are_no_data_found,
-                                      style: const TextStyle(
-                                          fontSize: 24, color: Colors.grey),
+                                      style: TextStyle(
+                                          fontSize: 14.sp, color: Colors.grey),
+                                    ),
+                                    SizedBox(
+                                      height: 4.h,
                                     ),
                                     Text(
-                                      S.of(context).filter_by_governorate,
-                                      style: const TextStyle(
-                                          fontSize: 16, color: Colors.grey),
+                                      S.of(context).search_by_customer_name,
+                                      style: TextStyle(
+                                          fontSize: 12.sp, color: Colors.grey),
                                     ),
                                   ],
                                 ),
@@ -333,75 +336,75 @@ class _FillterScreenState extends State<FillterScreen> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,
                                         children: [
-                                          const FaIcon(
+                                          FaIcon(
                                             FontAwesomeIcons.calendar,
-                                            size: 16,
-                                            color: Color(0xffD04848),
+                                            size: 12.sp,
+                                            color: const Color(0xffD04848),
                                           ),
-                                          const SizedBox(
-                                            width: 3,
+                                          SizedBox(
+                                            width: 3.w,
                                           ),
                                           Text(
                                             DateFormat('dd-MM-yyy')
                                                 .format(searchOrder.date!)
                                                 .toString(),
-                                            style: const TextStyle(
+                                            style: TextStyle(
                                                 fontWeight: FontWeight.w400,
-                                                fontSize: 16),
+                                                fontSize: 12.sp),
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(
-                                        height: 8,
+                                      SizedBox(
+                                        height: 8.h,
                                       ),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,
                                         children: [
-                                          const FaIcon(
+                                          FaIcon(
                                             FontAwesomeIcons.clock,
-                                            size: 16,
-                                            color: Color(0xff124076),
+                                            size: 14.sp,
+                                            color: const Color(0xff124076),
                                           ),
-                                          const SizedBox(
-                                            width: 6,
+                                          SizedBox(
+                                            width: 6.w,
                                           ),
                                           Text(
                                             searchOrder.time!.toString(),
-                                            style: const TextStyle(
+                                            style: TextStyle(
                                                 fontWeight: FontWeight.w400,
-                                                fontSize: 16),
+                                                fontSize: 12.sp),
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(
-                                        height: 8,
+                                      SizedBox(
+                                        height: 8.h,
                                       ),
                                       Row(
                                         children: [
                                           Text(
                                             searchOrder.clientName!,
-                                            style: const TextStyle(
+                                            style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 20),
+                                                fontSize: 16.sp),
                                           ),
-                                          const SizedBox(
-                                            width: 8,
+                                          SizedBox(
+                                            width: 8.w,
                                           ),
-                                          const FaIcon(
+                                          FaIcon(
                                             FontAwesomeIcons.user,
-                                            color: Color(0xff387ADF),
-                                            size: 17,
+                                            color: const Color(0xff387ADF),
+                                            size: 14.sp,
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(
-                                        height: 8,
+                                      SizedBox(
+                                        height: 8.h,
                                       ),
                                       Text(
                                         '${searchOrder.picesNumber} ${S.of(context).pices} ',
-                                        style: const TextStyle(
-                                          fontSize: 16,
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
                                         ),
                                       ),
                                       Row(
@@ -411,56 +414,57 @@ class _FillterScreenState extends State<FillterScreen> {
                                           Text(
                                               '${searchOrder.price! + newshipping} ${S.of(context).pound}',
                                               style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 14.sp,
                                                   color: Colors.green[400])),
                                         ],
                                       ),
                                       Text(
                                         '${searchOrder.clientPhone}',
-                                        style: const TextStyle(
-                                          fontSize: 16,
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
                                         ),
                                       ),
-                                      const SizedBox(
-                                        height: 4,
+                                      SizedBox(
+                                        height: 4.h,
                                       ),
                                       Text(
                                         '${searchOrder.governorate} - ${searchOrder.region} - ${searchOrder.streetName}\n${S.of(context).building_number} ${searchOrder.bulidingNumber} - ${S.of(context).floor_number} ${searchOrder.levelNumber} - ${S.of(context).apartment_number} ${searchOrder.flatNumber}',
-                                        style: const TextStyle(
-                                          fontSize: 16,
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
                                         ),
                                       ),
-                                      const SizedBox(
-                                        height: 9,
+                                      SizedBox(
+                                        height: 9.h,
                                       ),
                                       Text(
                                         '${searchOrder.comments}',
-                                        style: const TextStyle(
-                                          fontSize: 16,
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
                                         ),
                                       ),
-                                      const SizedBox(
-                                        height: 9,
+                                      SizedBox(
+                                        height: 9.h,
                                       ),
                                       Row(
                                         children: [
                                           Text(
                                             searchMod,
-                                            style: const TextStyle(
-                                                color: Color(0xff19376D),
-                                                fontSize: 18),
+                                            style: TextStyle(
+                                                color: const Color(0xff19376D),
+                                                fontSize: 14.sp),
                                           ),
-                                          const SizedBox(
-                                            width: 8,
+                                          SizedBox(
+                                            width: 8.w,
                                           ),
                                           FaIcon(
                                             iconShipping,
                                             color: iconColor,
+                                            size: 12.sp,
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(
-                                        height: 20,
+                                      SizedBox(
+                                        height: 20.h,
                                       ),
                                       Row(
                                         mainAxisAlignment:
@@ -468,19 +472,19 @@ class _FillterScreenState extends State<FillterScreen> {
                                         children: [
                                           Text(
                                             S.of(context).order_code,
-                                            style: const TextStyle(
-                                                fontSize: 15,
+                                            style: TextStyle(
+                                                fontSize: 14.sp,
                                                 fontWeight: FontWeight.w800,
                                                 color: Colors.grey),
                                           ),
                                           Text(
                                             ' : ${searchOrder.oId!.substring(0, 10)}',
-                                            style: const TextStyle(
-                                                fontSize: 16,
+                                            style: TextStyle(
+                                                fontSize: 12.sp,
                                                 fontWeight: FontWeight.w500),
                                           ),
-                                          const SizedBox(
-                                            width: 8,
+                                          SizedBox(
+                                            width: 8.w,
                                           ),
                                           GestureDetector(
                                             onTap: () {
@@ -491,15 +495,15 @@ class _FillterScreenState extends State<FillterScreen> {
                                                   text: S.of(context).code_copy,
                                                   state: ToastStates.success);
                                             },
-                                            child: const Icon(
+                                            child: Icon(
                                               Icons.copy,
-                                              size: 20,
+                                              size: 20.sp,
                                             ),
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(
-                                        height: 20,
+                                      SizedBox(
+                                        height: 20.h,
                                       ),
                                       searchOrder.isPanding! &&
                                               searchOrder.isShipped!
@@ -524,7 +528,7 @@ class _FillterScreenState extends State<FillterScreen> {
                                                             content: S
                                                                 .of(context)
                                                                 .do_the_order_cancel,
-                                                          onContinue:
+                                                            onContinue:
                                                                 () async {
                                                           await FirebaseFirestore
                                                               .instance
@@ -556,15 +560,15 @@ class _FillterScreenState extends State<FillterScreen> {
                                                         S
                                                             .of(context)
                                                             .Not_shipped,
-                                                        style: const TextStyle(
+                                                        style: TextStyle(
                                                             color: Colors.white,
-                                                            fontSize: 18),
+                                                            fontSize: 12.sp),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                                const SizedBox(
-                                                  width: 10,
+                                                SizedBox(
+                                                  width: 10.w,
                                                 ),
                                                 Expanded(
                                                   child: Container(
@@ -617,9 +621,9 @@ class _FillterScreenState extends State<FillterScreen> {
                                                         S
                                                             .of(context)
                                                             .is_shipped,
-                                                        style: const TextStyle(
+                                                        style: TextStyle(
                                                             color: Colors.white,
-                                                            fontSize: 18),
+                                                            fontSize: 12.sp),
                                                       ),
                                                     ),
                                                   ),

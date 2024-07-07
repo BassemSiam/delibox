@@ -113,8 +113,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Image(
                                     image: const AssetImage(
                                         'assets/images/car_image.png'),
-                                    width: (MediaQuery.sizeOf(context).width /
-                                        1.8),
+                                    width:
+                                        (MediaQuery.sizeOf(context).width / 2),
                                   ),
                                   SizedBox(
                                     height: 20.h,

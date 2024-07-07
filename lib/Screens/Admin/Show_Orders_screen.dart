@@ -4,6 +4,7 @@ import 'package:delibox/Screens/Admin/fillters_government.dart';
 import 'package:delibox/components/components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import '../../Models/orderModel.dart';
@@ -45,9 +46,9 @@ class _OrdersAdminState extends State<OrdersAdmin> {
               onPressed: () {
                 navigatorTo(context, FillterScreen(userId: widget.userId));
               },
-              icon: const Icon(
+              icon: Icon(
                 Icons.filter_list_outlined,
-                size: 40,
+                size: 30.sp,
               ),
             ),
           ),
@@ -57,9 +58,9 @@ class _OrdersAdminState extends State<OrdersAdmin> {
               onPressed: () {
                 navigatorTo(context, SearchAdminScreen(userId: widget.userId));
               },
-              icon: const Icon(
+              icon: Icon(
                 Icons.search,
-                size: 40,
+                size: 30.sp,
               ),
             ),
           ),
@@ -67,7 +68,7 @@ class _OrdersAdminState extends State<OrdersAdmin> {
         centerTitle: true,
         title: Text(
           widget.userName.toUpperCase(),
-          style: const TextStyle(color: Colors.black, fontSize: 22),
+          style: TextStyle(color: Colors.black, fontSize: 16.sp),
         ),
         backgroundColor: Colors.transparent,
       ),
@@ -96,107 +97,107 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                     ),
                     physics: const BouncingScrollPhysics(),
                     itemBuilder: (context, index) {
-                      final orders = ordersResults[index];
+                      final searchOrder = ordersResults[index];
                       String searchMod = '';
                       int newshipping;
                       dynamic iconShipping;
                       dynamic iconColor;
 
                       void shippingMood() {
-                        if (orders.isPanding!) {
+                        if (searchOrder.isPanding!) {
                           searchMod = S.of(context).in_waiting;
                           iconShipping = FontAwesomeIcons.spinner;
                           iconColor = Colors.blueAccent;
-                        } else if (!orders.isPanding!) {
+                        } else if (!searchOrder.isPanding!) {
                           searchMod = S.of(context).is_shipped;
                           iconShipping = FontAwesomeIcons.check;
                           iconColor = Colors.green;
                         }
-                        if (!orders.isShipped!) {
+                        if (!searchOrder.isShipped!) {
                           searchMod = S.of(context).Not_shipped;
                           iconShipping = FontAwesomeIcons.xmark;
                           iconColor = Colors.red;
                         }
                       }
 
-                      switch (orders.governorate) {
-                           case == 'القاهرة':
+                      switch (searchOrder.governorate) {
+                        case == 'القاهرة':
                           newshipping = 50;
                           break;
                         case == 'الجيزة':
-                          newshipping = 60;
+                          newshipping = 50;
                           break;
                         case == 'الإسكندرية':
-                          newshipping = 70;
+                          newshipping = 60;
                           break;
                         case == 'الإسماعيلية':
-                          newshipping = 65;
+                          newshipping = 60;
                           break;
                         case == 'أسوان':
-                          newshipping = 90;
+                          newshipping = 150;
                           break;
                         case == 'أسيوط':
-                          newshipping = 80;
+                          newshipping = 50;
                           break;
                         case == 'البحر الأحمر':
-                          newshipping = 110;
+                          newshipping = 50;
                           break;
                         case == 'البحيرة':
-                          newshipping = 70;
+                          newshipping = 95;
                           break;
                         case == 'بني سويف':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'بورسعيد':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'جنوب سيناء':
-                          newshipping = 110;
+                          newshipping = 50;
                           break;
                         case == 'الدقهلية':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'دمياط':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'سوهاج':
-                          newshipping = 80;
+                          newshipping = 50;
                           break;
                         case == 'السويس':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'الشرقية':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'شمال سيناء':
-                          newshipping = 110;
+                          newshipping = 50;
                           break;
                         case == 'الغربية':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'الفيوم':
-                          newshipping = 80;
+                          newshipping = 50;
                           break;
                         case == 'القليوبية':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'قنا':
-                          newshipping = 80;
+                          newshipping = 50;
                           break;
                         case == 'كفر الشيخ':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'مطروح':
-                          newshipping = 110;
+                          newshipping = 50;
                           break;
                         case == 'المنوفية':
-                          newshipping = 70;
+                          newshipping = 50;
                           break;
                         case == 'المنيا':
-                          newshipping = 80;
+                          newshipping = 50;
                           break;
                         case == 'الوادي الجديد':
-                          newshipping = 110;
+                          newshipping = 50;
                           break;
                         default:
                           newshipping = 0;
@@ -208,176 +209,176 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(
-                              height: 12,
-                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                const FaIcon(
+                                FaIcon(
                                   FontAwesomeIcons.calendar,
-                                  size: 16,
-                                  color: Color(0xffD04848),
+                                  size: 12.sp,
+                                  color: const Color(0xffD04848),
                                 ),
-                                const SizedBox(
-                                  width: 6,
+                                SizedBox(
+                                  width: 3.w,
                                 ),
                                 Text(
                                   DateFormat('dd-MM-yyy')
-                                      .format(orders.date!)
+                                      .format(searchOrder.date!)
                                       .toString(),
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontWeight: FontWeight.w400,
-                                      fontSize: 16),
+                                      fontSize: 12.sp),
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 9,
+                            SizedBox(
+                              height: 8.h,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                const FaIcon(
+                                FaIcon(
                                   FontAwesomeIcons.clock,
-                                  size: 16,
-                                  color: Color(0xff124076),
+                                  size: 14.sp,
+                                  color: const Color(0xff124076),
                                 ),
-                                const SizedBox(
-                                  width: 6,
+                                SizedBox(
+                                  width: 6.w,
                                 ),
                                 Text(
-                                  orders.time!.toString(),
-                                  style: const TextStyle(
+                                  searchOrder.time!.toString(),
+                                  style: TextStyle(
                                       fontWeight: FontWeight.w400,
-                                      fontSize: 16),
+                                      fontSize: 12.sp),
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 8,
+                            SizedBox(
+                              height: 8.h,
                             ),
                             Row(
                               children: [
                                 Text(
-                                  orders.clientName!,
-                                  style: const TextStyle(
+                                  searchOrder.clientName!,
+                                  style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 16.sp),
                                 ),
-                                const SizedBox(
-                                  width: 8,
+                                SizedBox(
+                                  width: 8.w,
                                 ),
-                                const FaIcon(
+                                FaIcon(
                                   FontAwesomeIcons.user,
-                                  color: Color(0xff387ADF),
-                                  size: 17,
+                                  color: const Color(0xff387ADF),
+                                  size: 14.sp,
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 8,
+                            SizedBox(
+                              height: 8.h,
                             ),
                             Text(
-                              '${orders.picesNumber} ${S.of(context).pices} ',
-                              style: const TextStyle(
-                                fontSize: 16,
+                              '${searchOrder.picesNumber} ${S.of(context).pices} ',
+                              style: TextStyle(
+                                fontSize: 14.sp,
                               ),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
-                                    '${orders.price! + newshipping} ${S.of(context).pound}',
+                                    '${searchOrder.price! + newshipping} ${S.of(context).pound}',
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 14.sp,
                                         color: Colors.green[400])),
                               ],
                             ),
                             Text(
-                              '${orders.clientPhone}',
-                              style: const TextStyle(
-                                fontSize: 16,
+                              '${searchOrder.clientPhone}',
+                              style: TextStyle(
+                                fontSize: 14.sp,
                               ),
                             ),
-                            const SizedBox(
-                              height: 8,
+                            SizedBox(
+                              height: 4.h,
                             ),
                             Text(
-                              '${orders.governorate} - ${orders.region} - ${orders.streetName}\n${S.of(context).building_number} ${orders.bulidingNumber} - ${S.of(context).floor_number} ${orders.levelNumber} - ${S.of(context).apartment_number} ${orders.flatNumber}',
-                              style: const TextStyle(
-                                fontSize: 16,
+                              '${searchOrder.governorate} - ${searchOrder.region} - ${searchOrder.streetName}\n${S.of(context).building_number} ${searchOrder.bulidingNumber} - ${S.of(context).floor_number} ${searchOrder.levelNumber} - ${S.of(context).apartment_number} ${searchOrder.flatNumber}',
+                              style: TextStyle(
+                                fontSize: 14.sp,
                               ),
                             ),
-                            const SizedBox(
-                              height: 8,
+                            SizedBox(
+                              height: 9.h,
                             ),
                             Text(
-                              '${orders.comments} ',
-                              style: const TextStyle(
-                                fontSize: 16,
+                              '${searchOrder.comments}',
+                              style: TextStyle(
+                                fontSize: 14.sp,
                               ),
                             ),
-                            const SizedBox(
-                              height: 8,
+                            SizedBox(
+                              height: 9.h,
                             ),
                             Row(
                               children: [
                                 Text(
                                   searchMod,
-                                  style: const TextStyle(
-                                      color: Color(0xff19376D), fontSize: 18),
+                                  style: TextStyle(
+                                      color: const Color(0xff19376D),
+                                      fontSize: 14.sp),
                                 ),
-                                const SizedBox(
-                                  width: 8,
+                                SizedBox(
+                                  width: 8.w,
                                 ),
                                 FaIcon(
                                   iconShipping,
                                   color: iconColor,
+                                  size: 12.sp,
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 15,
+                            SizedBox(
+                              height: 20.h,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
                                   S.of(context).order_code,
-                                  style: const TextStyle(
-                                      fontSize: 15,
+                                  style: TextStyle(
+                                      fontSize: 14.sp,
                                       fontWeight: FontWeight.w800,
                                       color: Colors.grey),
                                 ),
                                 Text(
-                                  ' : ${orders.oId!.substring(0, 10)}',
-                                  style: const TextStyle(
-                                      fontSize: 16,
+                                  ' : ${searchOrder.oId!.substring(0, 10)}',
+                                  style: TextStyle(
+                                      fontSize: 12.sp,
                                       fontWeight: FontWeight.w500),
                                 ),
-                                const SizedBox(
-                                  width: 8,
+                                SizedBox(
+                                  width: 8.w,
                                 ),
                                 GestureDetector(
                                   onTap: () {
                                     Clipboard.setData(ClipboardData(
-                                        text: orders.oId!.substring(0, 10)));
+                                        text:
+                                            searchOrder.oId!.substring(0, 10)));
                                     showToast(
                                         text: S.of(context).code_copy,
                                         state: ToastStates.success);
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.copy,
-                                    size: 20,
+                                    size: 20.sp,
                                   ),
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 15,
+                            SizedBox(
+                              height: 20.h,
                             ),
-                            orders.isPanding! && orders.isShipped!
+                            searchOrder.isPanding! && searchOrder.isShipped!
                                 ? Row(
                                     children: [
                                       Expanded(
@@ -390,7 +391,7 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                                             onPressed: () {
                                               showAlert(context,
                                                   continueButtonText:
-                                                      S.of(context).cancel,
+                                                      S.of(context).Not_shipped,
                                                   title: S
                                                       .of(context)
                                                       .order_cancel,
@@ -402,7 +403,7 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                                                     .collection('users')
                                                     .doc(widget.userId)
                                                     .collection('orders')
-                                                    .doc(orders.oId)
+                                                    .doc(searchOrder.oId)
                                                     .update({
                                                   'isPanding': true,
                                                   'isShipped': false,
@@ -420,15 +421,15 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                                             },
                                             child: Text(
                                               S.of(context).Not_shipped,
-                                              style: const TextStyle(
+                                              style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 18),
+                                                  fontSize: 12.sp),
                                             ),
                                           ),
                                         ),
                                       ),
-                                      const SizedBox(
-                                        width: 10,
+                                      SizedBox(
+                                        width: 10.w,
                                       ),
                                       Expanded(
                                         child: Container(
@@ -452,7 +453,7 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                                                     .collection('users')
                                                     .doc(widget.userId)
                                                     .collection('orders')
-                                                    .doc(orders.oId)
+                                                    .doc(searchOrder.oId)
                                                     .update({
                                                   'isPanding': false,
                                                   'isShipped': true,
@@ -469,16 +470,16 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                                             },
                                             child: Text(
                                               S.of(context).is_shipped,
-                                              style: const TextStyle(
+                                              style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 18),
+                                                  fontSize: 12.sp),
                                             ),
                                           ),
                                         ),
                                       ),
                                     ],
                                   )
-                                : Container(),
+                                : Container()
                           ],
                         ),
                       );
@@ -493,8 +494,7 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                         ),
                         Text(
                           S.of(context).no_orders,
-                          style:
-                              const TextStyle(fontSize: 26, color: Colors.grey),
+                          style: TextStyle(fontSize: 16.sp, color: Colors.grey),
                         ),
                       ],
                     ),

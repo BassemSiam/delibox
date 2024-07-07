@@ -25,17 +25,24 @@ class _ChooseLangState extends State<ChooseLang> {
           setState(() {
             engSelectColor = Colors.grey;
             arSelectColor = Colors.grey;
+            CacheHelper.removeData(key: 'lang');
           });
         },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Spacer(
+              flex: 3,
+            ),
             SizedBox(
-              height: 250.h,
+              height: 220.h,
               width: 300.w,
               child: Image.asset(
                 'assets/images/delibox_image.png',
               ),
+            ),
+            const Spacer(
+              flex: 1,
             ),
             Container(
               width: double.infinity,
@@ -159,6 +166,9 @@ class _ChooseLangState extends State<ChooseLang> {
                 ],
               ),
             ),
+            const Spacer(
+              flex: 2,
+            )
           ],
         ),
       ),

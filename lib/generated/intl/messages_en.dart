@@ -134,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Number of pieces"),
         "numer_order_validator": MessageLookupByLibrary.simpleMessage(
             "You must enter the number of pieces"),
+        "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "order_cancel": MessageLookupByLibrary.simpleMessage("Order Cancel"),
         "order_code": MessageLookupByLibrary.simpleMessage("Order Code"),
         "order_deliverd": MessageLookupByLibrary.simpleMessage("order shipped"),

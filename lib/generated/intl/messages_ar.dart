@@ -127,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "number_of_pieces": MessageLookupByLibrary.simpleMessage("عدد القطع"),
         "numer_order_validator":
             MessageLookupByLibrary.simpleMessage("يجب ادخال عدد القطع"),
+        "ok": MessageLookupByLibrary.simpleMessage("نعم"),
         "order_cancel": MessageLookupByLibrary.simpleMessage("رفض الطلب"),
         "order_code": MessageLookupByLibrary.simpleMessage("كود الطلب"),
         "order_deliverd": MessageLookupByLibrary.simpleMessage("شحن الطلب"),

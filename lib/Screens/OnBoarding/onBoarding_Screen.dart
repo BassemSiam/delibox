@@ -1,6 +1,7 @@
 import 'package:delibox/Screens/User%20Login&Register/Register_Screen.dart';
 import 'package:delibox/components/const.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../Models/onBoardingScreen.dart';
 import '../../components/cash_helper.dart';
 import '../../generated/l10n.dart';
@@ -70,10 +71,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           },
           child: Text(
             S.of(context).skip,
-            style: const TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.black,
-              fontSize: 20,
+              fontSize: 14.sp,
             ),
           ),
         ),
@@ -98,7 +99,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     itemBuilder: (context, index) =>
                         buildBoardingItem(boardings![index]),
                     itemCount: boardings!.length)),
-            const SizedBox(height: 60),
+            SizedBox(height: 60.h),
             Row(
               children: [
                 SmoothPageIndicator(
@@ -146,21 +147,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         children: [
           Expanded(
             child: Image(
+              width: double.infinity,
               image: AssetImage('${BoardingModel.image}'),
             ),
           ),
-          const SizedBox(
-            height: 60,
+          SizedBox(
+            height: 60.h,
           ),
           Text('${BoardingModel.title}',
-              style:
-                  const TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
-          const SizedBox(
-            height: 20,
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold)),
+          SizedBox(
+            height: 20.sp,
           ),
           Text('${BoardingModel.body}',
-              style:
-                  const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold)),
         ],
       );
 }

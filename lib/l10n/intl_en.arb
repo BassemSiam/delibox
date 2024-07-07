@@ -113,6 +113,7 @@
     "customers" : "customers",
     "brand" : "brand",
     "orders" : "orders",
+    
 
 
 
@@ -148,6 +149,6 @@
     "skip" : "Skip",
 
     "Select_Language" : "Select Language : ",
-    "error_network" : "There is a problem with the Internet , try again later"
-    
+    "error_network" : "There is a problem with the Internet , try again later",
+    "ok" : "Ok"
 }

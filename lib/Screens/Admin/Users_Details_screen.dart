@@ -1,4 +1,6 @@
+import 'package:delibox/components/const.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../generated/l10n.dart';
@@ -47,81 +49,81 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     children: [
                       Text(
                         widget.userName.toUpperCase(),
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16.sp),
                       ),
-                      const SizedBox(
-                        width: 8,
+                      SizedBox(
+                        width: 8.w,
                       ),
-                      const FaIcon(
+                      FaIcon(
                         FontAwesomeIcons.user,
                         color: Color(0xff387ADF),
-                        size: 17,
+                        size: 14.sp,
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: 30.h,
                   ),
                   Row(
                     children: [
                       Text(
                         widget.brandName,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 20),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 16.sp),
                       ),
-                      const SizedBox(
-                        width: 8,
+                      SizedBox(
+                        width: 8.w,
                       ),
-                      const FaIcon(
+                      FaIcon(
                         FontAwesomeIcons.brandsFontAwesome,
-                        color: Color(0xff211951),
-                        size: 17,
+                        color: Colors.blue,
+                        size: 14.sp,
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: 30.w,
                   ),
                   Row(
                     children: [
                       Text(
                         widget.email,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 20),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 16.sp),
                       ),
-                      const SizedBox(
-                        width: 8,
+                      SizedBox(
+                        width: 8.w,
                       ),
-                      const Icon(
+                      Icon(
                         Icons.email,
-                        color: Color(0xff211951),
-                        size: 17,
+                        color: Colors.red,
+                        size: 14.sp,
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: 30.h,
                   ),
                   Row(
                     children: [
                       Text(
                         widget.phone,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 20),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 16.sp),
                       ),
-                      const SizedBox(
-                        width: 8,
+                      SizedBox(
+                        width: 8.w,
                       ),
-                      const FaIcon(
+                      FaIcon(
                         FontAwesomeIcons.phone,
-                        color: Color(0xff211951),
-                        size: 17,
+                        color: Colors.green,
+                        size: 14.sp,
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 50,
+                  SizedBox(
+                    height: 50.h,
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -129,15 +131,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                       children: [
                         Text(
                           '${S.of(context).order_code} : ',
-                          style: const TextStyle(
-                              fontSize: 16,
+                          style: TextStyle(
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.w400,
                               color: Colors.grey),
                         ),
                         Text(
                           widget.userId.substring(0, 15),
-                          style: const TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w500),
+                          style: TextStyle(
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                       ],
                     ),
