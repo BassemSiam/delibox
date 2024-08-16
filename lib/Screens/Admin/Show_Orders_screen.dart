@@ -282,6 +282,16 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                                 fontSize: 14.sp,
                               ),
                             ),
+                            SizedBox(
+                              height: 12.h,
+                            ),
+                            Text(
+                              searchOrder.productName!,
+                              style: TextStyle(fontSize: 12.sp),
+                            ),
+                            SizedBox(
+                              height: 12.h,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
@@ -291,6 +301,9 @@ class _OrdersAdminState extends State<OrdersAdmin> {
                                         fontSize: 14.sp,
                                         color: Colors.green[400])),
                               ],
+                            ),
+                            SizedBox(
+                              height: 12.h,
                             ),
                             Text(
                               '${searchOrder.clientPhone}',

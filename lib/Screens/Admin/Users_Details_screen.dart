@@ -12,18 +12,21 @@ class UserDetailsScreen extends StatefulWidget {
     required this.email,
     required this.phone,
     required this.brandName,
+    required this.pickupAddress,
   });
   final String userId;
   final String userName;
   final String email;
   final String phone;
   final String brandName;
+  final String pickupAddress;
 
   @override
   State<UserDetailsScreen> createState() => _UserDetailsScreenState();
 }
 
 class _UserDetailsScreenState extends State<UserDetailsScreen> {
+  TextOverflow textOverflow = TextOverflow.ellipsis;
   @override
   void initState() {
     super.initState();
@@ -86,6 +89,42 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   ),
                   Row(
                     children: [
+                      Flexible(
+                        child: GestureDetector(
+                          onTap: () {
+                            if (textOverflow == TextOverflow.ellipsis) {
+                              setState(() {
+                                textOverflow = TextOverflow.visible;
+                              });
+                            } else {
+                              setState(() {
+                                textOverflow = TextOverflow.ellipsis;
+                              });
+                            }
+                          },
+                          child: Text(
+                            widget.pickupAddress,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 16.sp),
+                            overflow: textOverflow,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 8.w,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.house,
+                        color: const Color.fromARGB(255, 12, 55, 90),
+                        size: 14.sp,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30.h,
+                  ),
+                  Row(
+                    children: [
                       Text(
                         widget.email,
                         style: TextStyle(
@@ -122,7 +161,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ],
                   ),
                   SizedBox(
-                    height: 50.h,
+                    height: 30.h,
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,

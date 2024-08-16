@@ -1,3 +1,4 @@
+import 'package:delibox/components/Notification_helper.dart';
 import 'package:delibox/components/cash_helper.dart';
 import 'package:delibox/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,10 +10,12 @@ import 'components/components.dart';
 import 'components/const.dart';
 import 'components/splash_screen.dart';
 import 'generated/l10n.dart';
+import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  HttpOverrides.global = MyHttpOverrides();
   // SharedPreferences.setMockInitialValues({});
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
@@ -21,6 +24,11 @@ void main() async {
   var language = await CacheHelper.getData(key: 'lang');
 
   print(language);
+  NotificationsHelper notificationsHelper = NotificationsHelper();
+  await notificationsHelper.initNotifications();
+  String? accesstoken = await notificationsHelper.getAccessToken();
+
+
 
   getUserData(sendUid: uId);
 
@@ -118,5 +126,14 @@ class MyApp extends StatelessWidget {
             home: const SplashScreen(),
           );
         });
+  }
+}
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
   }
 }

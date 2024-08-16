@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:delibox/Screens/Admin/Show_Orders_screen.dart';
 import 'package:delibox/Screens/Admin/Users_Details_screen.dart';
 import 'package:delibox/components/components.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../Models/orderModel.dart';
@@ -20,6 +21,7 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
   List<String> brandnames = [];
   List<String> email = [];
   List<String> phone = [];
+  List<String> pickupAddress = [];
   List<String> idForUser = [];
   List<OrderModel> orders = [];
   bool isLoading = true;
@@ -40,11 +42,13 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
         brandnames.clear();
         email.clear();
         phone.clear();
+        pickupAddress.clear();
         idForUser.clear();
         ordersStreams.clear();
         querySnapshot.docs.forEach((result) {
           usernames.add(result.data()['userName']);
           brandnames.add(result.data()['brandName']);
+          pickupAddress.add(result.data()['pickupAddress']?.toString() ?? '');
           email.add(result.data()['email']);
           phone.add(result.data()['phone']);
           idForUser.add(result.data()['uId']);
@@ -78,9 +82,9 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                     continueButtonText: S.of(context).logout,
                     title: S.of(context).log_out,
                     content: S.of(context).do_you_want_to_logout,
-                    onContinue: () {
+                    onContinue: () async {
                   CacheHelper.removeData(key: 'uId');
-
+                  await FirebaseAuth.instance.signOut();
                   CacheHelper.removeData(key: 'loggedIn');
                   navigateAndFinish(context, const LoginScreen());
                 });
@@ -143,6 +147,7 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                                         email: email[index],
                                         phone: phone[index],
                                         brandName: brandnames[index],
+                                        pickupAddress: pickupAddress[index],
                                       ),
                                     );
                                   },
@@ -204,7 +209,6 @@ class _ShowUsersScreenState extends State<ShowUsersScreen> {
                                                         color: Colors.white),
                                                   ),
                                                   onPressed: () {
-                                                    print(idForUser[index]);
                                                     navigatorTo(
                                                       context,
                                                       OrdersAdmin(

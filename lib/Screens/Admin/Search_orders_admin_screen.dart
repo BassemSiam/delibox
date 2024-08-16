@@ -72,7 +72,7 @@ class _SearchAdminScreenState extends State<SearchAdminScreen> {
           child: Column(
             children: [
               SizedBox(
-                height: 60,
+                height: 38.h,
                 child: CupertinoSearchTextField(
                   padding: const EdgeInsets.all(12),
                   onChanged: onSearchChanged,
@@ -80,6 +80,8 @@ class _SearchAdminScreenState extends State<SearchAdminScreen> {
                   keyboardType: TextInputType.name,
                   placeholder: S.of(context).search_by_name,
                   controller: searchController,
+                  style: TextStyle(fontSize: 14.sp),
+                  placeholderStyle: TextStyle(fontSize: 12.sp),
                 ),
               ),
               StreamBuilder<QuerySnapshot>(
@@ -137,7 +139,7 @@ class _SearchAdminScreenState extends State<SearchAdminScreen> {
                                   const Divider(
                                 endIndent: 12,
                                 indent: 12,
-                                thickness: 3,
+                                thickness: 2,
                               ),
                               physics: const BouncingScrollPhysics(),
                               itemBuilder: (context, index) {
@@ -328,6 +330,16 @@ class _SearchAdminScreenState extends State<SearchAdminScreen> {
                                         style: TextStyle(
                                           fontSize: 14.sp,
                                         ),
+                                      ),
+                                      SizedBox(
+                                        height: 12.h,
+                                      ),
+                                      Text(
+                                        searchOrder.productName!,
+                                        style: TextStyle(fontSize: 12.sp),
+                                      ),
+                                      SizedBox(
+                                        height: 12.h,
                                       ),
                                       Row(
                                         mainAxisAlignment:

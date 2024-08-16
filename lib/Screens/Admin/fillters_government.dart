@@ -407,6 +407,16 @@ class _FillterScreenState extends State<FillterScreen> {
                                           fontSize: 14.sp,
                                         ),
                                       ),
+                                      SizedBox(
+                                        height: 12.h,
+                                      ),
+                                      Text(
+                                        searchOrder.productName!,
+                                        style: TextStyle(fontSize: 12.sp),
+                                      ),
+                                      SizedBox(
+                                        height: 12.h,
+                                      ),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,

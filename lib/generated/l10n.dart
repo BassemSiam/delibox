@@ -90,6 +90,16 @@ class S {
     );
   }
 
+  /// `Pickup Address`
+  String get pickup_Address {
+    return Intl.message(
+      'Pickup Address',
+      name: 'pickup_Address',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Phone Number`
   String get phone_number {
     return Intl.message(
@@ -120,20 +130,20 @@ class S {
     );
   }
 
-  /// `Rigister`
+  /// `Register`
   String get rigister {
     return Intl.message(
-      'Rigister',
+      'Register',
       name: 'rigister',
       desc: '',
       args: [],
     );
   }
 
-  /// `have an Account?`
+  /// `Already have an Account?`
   String get thare_are_account {
     return Intl.message(
-      'have an Account?',
+      'Already have an Account?',
       name: 'thare_are_account',
       desc: '',
       args: [],
@@ -165,6 +175,16 @@ class S {
     return Intl.message(
       'You must enter the brand name',
       name: 'brand_validator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You must enter the pickup Address`
+  String get pickup_Address_validator {
+    return Intl.message(
+      'You must enter the pickup Address',
+      name: 'pickup_Address_validator',
       desc: '',
       args: [],
     );
@@ -410,6 +430,16 @@ class S {
     );
   }
 
+  /// `Product Name`
+  String get productName {
+    return Intl.message(
+      'Product Name',
+      name: 'productName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Number of pieces`
   String get number_of_pieces {
     return Intl.message(
@@ -575,6 +605,16 @@ class S {
     return Intl.message(
       'You must enter the customer\'s name',
       name: 'add_customer_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You must enter the product Name`
+  String get productName_validator {
+    return Intl.message(
+      'You must enter the product Name',
+      name: 'productName_validator',
       desc: '',
       args: [],
     );

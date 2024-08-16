@@ -22,10 +22,7 @@ getUserData({required sendUid}) {
       .get()
       .then((value) {
     model = UserModel.fromJson(value.data()!);
-    print(value.data());
-  }).catchError((onError) {
-    print(onError.toString());
-  });
+  }).catchError((onError) {});
 }
 
 updateUserData({
@@ -47,10 +44,8 @@ updateUserData({
       .doc(model!.uId)
       .update(userModel.toJson())
       .then((value) {
-    print('success the value was updated ');
     getUserData(sendUid: uId);
   }).catchError((onError) {
-    print("error is ${onError}");
   });
 }
 
@@ -126,6 +121,7 @@ Future<void> createUserOrders(
   BuildContext context, {
   required String clientName,
   required String clientPhone,
+  required String productName,
   required String piceNumber,
   required int price,
   required int shipingPrice,
@@ -161,6 +157,7 @@ Future<void> createUserOrders(
             orderId: orderId,
             clientName: clientName.trim(),
             clientPhone: clientPhone.trim(),
+            productName: productName.trim(),
             picesNumber: piceNumber.trim(),
             oId: oId,
             price: price,

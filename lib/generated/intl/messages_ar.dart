@@ -144,10 +144,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_validator":
             MessageLookupByLibrary.simpleMessage("يجب ادخال رقم الهاتف"),
         "pices": MessageLookupByLibrary.simpleMessage("قطع"),
+        "pickup_Address":
+            MessageLookupByLibrary.simpleMessage("عنوان الاستلام"),
+        "pickup_Address_validator":
+            MessageLookupByLibrary.simpleMessage("يجب ادخال عنوان الاستلام"),
         "pound": MessageLookupByLibrary.simpleMessage("جنيه"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "price_order_validator":
             MessageLookupByLibrary.simpleMessage("يجب ادخال السعر"),
+        "productName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "productName_validator":
+            MessageLookupByLibrary.simpleMessage("يجب ادخال اسم المنتج"),
         "profile_b": MessageLookupByLibrary.simpleMessage(
             "ملفك الشخصي ويمكنك تحديث اسم العلامة التجارية أو البريد الإلكتروني أو الهاتف الخاص بمعلوماتك "),
         "profile_t": MessageLookupByLibrary.simpleMessage("الحساب التعريفى"),

@@ -3,6 +3,7 @@
     "words_rigster" : "قم بملأ البيانات و انشاء حساب جديد",
     "user_name" : "اسم المستخدم",
     "brand_name" : "اسم البرند",
+    "pickup_Address" : "عنوان الاستلام",
     "phone_number" : "رقم الهاتف",
     "email" : "البريد الالكترونى",
     "password" : "كلمة المرور",
@@ -11,6 +12,7 @@
     "signin" : "دخول",
     "user_validator" : "يجب ادخال اسم المستخدم",
     "brand_validator" : "يجب ادخال اسم البرند",
+    "pickup_Address_validator" : "يجب ادخال عنوان الاستلام",
     "phone_validator" : "يجب ادخال رقم الهاتف",
     "phone_count_validator" : "يجب ان يكون رقم الهاتف 11 رقم صحيح",
     "phone_fasle_validator" : "رقم الهاتف غير صحيح",
@@ -48,6 +50,7 @@
     "delete_order" :"حذف طلب",
     "customer_name" :"اسم العميل",
     "customer_Phone" :"رقم العميل",
+    "productName" :"اسم المنتج",
     "number_of_pieces" :"عدد القطع",
     "the_address" :"العنوان",
     "governorate" :"محافظة",
@@ -67,6 +70,7 @@
 
 
     "add_customer_name" :"يجب ادخال اسم العميل",
+    "productName_validator" : "يجب ادخال اسم المنتج",
     "numer_order_validator" : "يجب ادخال عدد القطع",
     "without_shipping" : " ( بدون الشحن )",
     "price_order_validator" : "يجب ادخال السعر",

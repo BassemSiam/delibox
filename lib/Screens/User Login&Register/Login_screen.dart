@@ -112,9 +112,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                   Image(
                                     image: const AssetImage(
-                                        'assets/images/car_image.png'),
-                                    width:
-                                        (MediaQuery.sizeOf(context).width / 2),
+                                        'assets/images/car-removelogooo.png'),
+                                    width: (MediaQuery.sizeOf(context).width /
+                                        1.5),
                                   ),
                                   SizedBox(
                                     height: 20.h,
@@ -341,6 +341,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                                     .too_many_requests);
                                           } else if (e.code ==
                                               'network-request-failed') {
+                                            showSnackBar(
+                                                context,
+                                                S
+                                                    .of(context)
+                                                    .network_request_failed);
+                                          } else if (e.code == 'unknown') {
+                                            print(
+                                                'An internal error has occurred: ${e.message}');
                                             showSnackBar(
                                                 context,
                                                 S

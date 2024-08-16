@@ -5,13 +5,13 @@ class IconBroken {
 
   static const String _fontFamily = 'IconBroken';
 
-  static const IconData User = IconData(0xe900, fontFamily: _fontFamily);
-  static const IconData User1 = IconData(0xe901, fontFamily: _fontFamily);
-  static const IconData Activity = IconData(0xe902, fontFamily: _fontFamily);
-  static const IconData Add_User = IconData(0xe903, fontFamily: _fontFamily);
-  static const IconData Arrow___Down_2 =
+  static const IconData user = IconData(0xe900, fontFamily: _fontFamily);
+  static const IconData user1 = IconData(0xe901, fontFamily: _fontFamily);
+  static const IconData activity = IconData(0xe902, fontFamily: _fontFamily);
+  static const IconData addUser = IconData(0xe903, fontFamily: _fontFamily);
+  static const IconData arrow___down_2 =
       IconData(0xe904, fontFamily: _fontFamily);
-  static const IconData Arrow___Down_3 =
+  static const IconData arrow___down_3 =
       IconData(0xe905, fontFamily: _fontFamily);
   static const IconData Arrow___Down_Circle =
       IconData(0xe906, fontFamily: _fontFamily);
@@ -47,28 +47,28 @@ class IconBroken {
       IconData(0xe915, fontFamily: _fontFamily);
   static const IconData Arrow___Up_Square =
       IconData(0xe916, fontFamily: _fontFamily);
-  static const IconData Arrow___Up = IconData(0xe917, fontFamily: _fontFamily);
-  static const IconData Bag_2 = IconData(0xe918, fontFamily: _fontFamily);
-  static const IconData Bag = IconData(0xe919, fontFamily: _fontFamily);
-  static const IconData Bookmark = IconData(0xe91a, fontFamily: _fontFamily);
-  static const IconData Buy = IconData(0xe91b, fontFamily: _fontFamily);
-  static const IconData Calendar = IconData(0xe91c, fontFamily: _fontFamily);
+  static const IconData arrow_p = IconData(0xe917, fontFamily: _fontFamily);
+  static const IconData bag_2 = IconData(0xe918, fontFamily: _fontFamily);
+  static const IconData bag = IconData(0xe919, fontFamily: _fontFamily);
+  static const IconData bookmark = IconData(0xe91a, fontFamily: _fontFamily);
+  static const IconData buy = IconData(0xe91b, fontFamily: _fontFamily);
+  static const IconData calendar = IconData(0xe91c, fontFamily: _fontFamily);
   static const IconData Call_Missed = IconData(0xe91d, fontFamily: _fontFamily);
   static const IconData Call_Silent = IconData(0xe91e, fontFamily: _fontFamily);
-  static const IconData Call = IconData(0xe91f, fontFamily: _fontFamily);
-  static const IconData Calling = IconData(0xe920, fontFamily: _fontFamily);
-  static const IconData Camera = IconData(0xe921, fontFamily: _fontFamily);
-  static const IconData Category = IconData(0xe922, fontFamily: _fontFamily);
-  static const IconData Chart = IconData(0xe923, fontFamily: _fontFamily);
-  static const IconData Chat = IconData(0xe924, fontFamily: _fontFamily);
-  static const IconData Close_Square =
+  static const IconData call = IconData(0xe91f, fontFamily: _fontFamily);
+  static const IconData calling = IconData(0xe920, fontFamily: _fontFamily);
+  static const IconData camera = IconData(0xe921, fontFamily: _fontFamily);
+  static const IconData category = IconData(0xe922, fontFamily: _fontFamily);
+  static const IconData chart = IconData(0xe923, fontFamily: _fontFamily);
+  static const IconData chat = IconData(0xe924, fontFamily: _fontFamily);
+  static const IconData close_Square =
       IconData(0xe925, fontFamily: _fontFamily);
-  static const IconData Danger = IconData(0xe926, fontFamily: _fontFamily);
-  static const IconData Delete = IconData(0xe927, fontFamily: _fontFamily);
-  static const IconData Discount = IconData(0xe928, fontFamily: _fontFamily);
-  static const IconData Discovery = IconData(0xe929, fontFamily: _fontFamily);
-  static const IconData Document = IconData(0xe92a, fontFamily: _fontFamily);
-  static const IconData Download = IconData(0xe92b, fontFamily: _fontFamily);
+  static const IconData danger = IconData(0xe926, fontFamily: _fontFamily);
+  static const IconData delete = IconData(0xe927, fontFamily: _fontFamily);
+  static const IconData discount = IconData(0xe928, fontFamily: _fontFamily);
+  static const IconData discovery = IconData(0xe929, fontFamily: _fontFamily);
+  static const IconData document = IconData(0xe92a, fontFamily: _fontFamily);
+  static const IconData download = IconData(0xe92b, fontFamily: _fontFamily);
   static const IconData Edit_Square = IconData(0xe92c, fontFamily: _fontFamily);
   static const IconData Edit = IconData(0xe92d, fontFamily: _fontFamily);
   static const IconData Filter_2 = IconData(0xe92e, fontFamily: _fontFamily);

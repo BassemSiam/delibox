@@ -140,7 +140,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   const Divider(
                                 endIndent: 12,
                                 indent: 12,
-                                thickness: 3,
+                                thickness: 2,
                               ),
                               physics: const BouncingScrollPhysics(),
                               itemBuilder: (context, index) {
@@ -300,6 +300,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                             size: 12.sp,
                                           ),
                                         ],
+                                      ),
+                                      SizedBox(
+                                        height: 12.h,
+                                      ),
+                                      Text(
+                                        searchOrder.productName!,
+                                        style: TextStyle(fontSize: 12.sp,),
                                       ),
                                       SizedBox(
                                         height: 12.h,

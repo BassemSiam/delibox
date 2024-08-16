@@ -22,6 +22,7 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
   var clientNameController = TextEditingController();
   var clientPhoneController = TextEditingController();
   var piceNumberController = TextEditingController();
+  var productNameController = TextEditingController();
   var priceController = TextEditingController();
   var regionController = TextEditingController();
   var streetNameController = TextEditingController();
@@ -185,6 +186,9 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
                               var clintPhoneCon = TextEditingController(
                                   text: order.clientPhone!);
 
+                              var productNameCon = TextEditingController(
+                                  text: order.productName!);
+
                               var clintPiceCon = TextEditingController(
                                   text: order.picesNumber!);
 
@@ -290,6 +294,16 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
                                               text:
                                                   '${S.of(context).customer_Phone} : ',
                                               keybordType: TextInputType.phone,
+                                              validator: (p0) {
+                                                return null;
+                                              },
+                                            ),
+                                            TextFiledOrder(
+                                              enabled: false,
+                                              controller: productNameCon,
+                                              text:
+                                                  '${S.of(context).productName} : ',
+                                              keybordType: TextInputType.text,
                                               validator: (p0) {
                                                 return null;
                                               },
@@ -710,6 +724,24 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
                                           },
                                         ),
                                         TextFiledOrder(
+                                          controller: productNameController,
+                                          icon: Icon(
+                                            Icons.gif_box_rounded,
+                                            size: 18.sp,
+                                          ),
+                                          keybordType: TextInputType.text,
+                                          text:
+                                              '${S.of(context).productName}:  ',
+                                          validator: (value) {
+                                            if (value!.isEmpty) {
+                                              return S
+                                                  .of(context)
+                                                  .productName_validator;
+                                            }
+                                            return null;
+                                          },
+                                        ),
+                                        TextFiledOrder(
                                           controller: piceNumberController,
                                           icon: Icon(
                                             Icons.numbers,
@@ -1052,6 +1084,9 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
                                                     clientPhone:
                                                         clientPhoneController
                                                             .text,
+                                                    productName:
+                                                        productNameController
+                                                            .text,
                                                     piceNumber:
                                                         piceNumberController
                                                             .text,
@@ -1172,6 +1207,7 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
     clientNameController.text = '';
     clientPhoneController.text = '';
     piceNumberController.text = '';
+    productNameController.text = '';
     priceController.text = '';
     regionController.text = '';
     streetNameController.text = '';

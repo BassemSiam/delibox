@@ -71,6 +71,17 @@ class _CalculationScreenState extends State<CalculationScreen> {
     setState(() {
       _ordersByDay = ordersByDay;
     });
+
+    if (mounted) {
+      setState(() {
+        _ordersByDay = ordersByDay;
+      });
+    }
+
+    @override
+    void dispose() {
+      super.dispose();
+    }
   }
 
   @override

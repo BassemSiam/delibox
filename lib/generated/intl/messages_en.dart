@@ -151,17 +151,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_validator": MessageLookupByLibrary.simpleMessage(
             "You must enter the phone Number"),
         "pices": MessageLookupByLibrary.simpleMessage("pices"),
+        "pickup_Address":
+            MessageLookupByLibrary.simpleMessage("Pickup Address"),
+        "pickup_Address_validator": MessageLookupByLibrary.simpleMessage(
+            "You must enter the pickup Address"),
         "pound": MessageLookupByLibrary.simpleMessage("L.E"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "price_order_validator":
             MessageLookupByLibrary.simpleMessage("You must enter the price"),
+        "productName": MessageLookupByLibrary.simpleMessage("Product Name"),
+        "productName_validator": MessageLookupByLibrary.simpleMessage(
+            "You must enter the product Name"),
         "profile_b": MessageLookupByLibrary.simpleMessage(
             "your profile and you can update brand name , email or phone of your infromation"),
         "profile_t": MessageLookupByLibrary.simpleMessage("Profile"),
         "region": MessageLookupByLibrary.simpleMessage("Region"),
         "region_validator":
             MessageLookupByLibrary.simpleMessage("You must enter a Region"),
-        "rigister": MessageLookupByLibrary.simpleMessage("Rigister"),
+        "rigister": MessageLookupByLibrary.simpleMessage("Register"),
         "search_by_customer_name": MessageLookupByLibrary.simpleMessage(
             "Search by customer name to view order information"),
         "search_by_name":
@@ -174,7 +181,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "street_name_validator": MessageLookupByLibrary.simpleMessage(
             "You must enter a Street Name"),
         "thare_are_account":
-            MessageLookupByLibrary.simpleMessage("have an Account?"),
+            MessageLookupByLibrary.simpleMessage("Already have an Account?"),
         "the_address": MessageLookupByLibrary.simpleMessage("Address"),
         "there_are_no_data_found":
             MessageLookupByLibrary.simpleMessage("No results found"),

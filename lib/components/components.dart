@@ -10,7 +10,6 @@ import 'package:lottie/lottie.dart';
 import '../generated/l10n.dart';
 import '../main.dart';
 import 'package:intl/intl.dart';
-
 class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key, required this.buttonText, required this.onClick});
@@ -280,7 +279,7 @@ cancelAlert(
           title: text,
           width: 350.w,
           showCloseIcon: true,
-          btnOkOnPress: () => Navigator.pop(context),
+          btnOkOnPress: () => Navigator.pop,
           btnOkColor: Colors.black,
           btnOkText: S.of(context).ok)
       .show();
@@ -358,9 +357,11 @@ bool isArabic() {
   return Intl.getCurrentLocale() == 'ar';
 }
 
-
-
-
+// final pound = Currency.create('EGP', 2,
+//     symbol: isArabic() ? 'ج.م' : '£E',
+//     groupSeparator: ',',
+//     decimalSeparator: '.',
+//     pattern: '#,##0.00 S');
 
 
 // showTimeAlertDone(context, {required String text}) {

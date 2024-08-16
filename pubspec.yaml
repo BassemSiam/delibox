@@ -35,8 +35,10 @@ dependencies:
   connectivity_plus: ^5.0.2
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
+  dio: ^5.5.0+1
   firebase_auth: ^4.16.0
   firebase_core: ^2.24.2
+  firebase_messaging: ^14.9.4
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -44,6 +46,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   fluttertoast: ^8.2.4
   font_awesome_flutter: ^10.6.0
+  googleapis_auth: ^1.6.0
+  http: ^1.2.2
   intl: ^0.19.0
   lottie: ^2.6.0
   modal_progress_hud_nsn: ^0.4.0
@@ -85,6 +89,7 @@ flutter:
     - assets/images/onBoardingImage/
     - assets/videos/
     - assets/Animation/
+    - assets/delibox-36e5f-firebase-adminsdk-clz6b-1f0cb2dd29.json
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

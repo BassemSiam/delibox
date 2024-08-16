@@ -22,6 +22,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   var formKey = GlobalKey<FormState>();
   var userController = TextEditingController();
   var brandNameController = TextEditingController();
+  var pickupAddressController = TextEditingController();
   var phoneController = TextEditingController();
   var emailController = TextEditingController();
   var passController = TextEditingController();
@@ -38,6 +39,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
+      progressIndicator: loadingCar(),
       child: Scaffold(
         body: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
@@ -118,7 +120,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   ),
                                   Image(
                                     image: const AssetImage(
-                                        'assets/images/car_image.png'),
+                                        'assets/images/car-removelogooo.png'),
                                     width: (MediaQuery.sizeOf(context).width /
                                         1.8),
                                   ),
@@ -199,6 +201,49 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       style:
                                           const TextStyle(color: Colors.black),
                                       controller: brandNameController,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10.h,
+                                  ),
+                                  SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.1,
+                                    child: TextFormField(
+                                      textDirection: TextDirection.ltr,
+                                      decoration: InputDecoration(
+                                        suffixIcon: Icon(
+                                          Icons.home,
+                                          size: 22.sp,
+                                        ),
+                                        alignLabelWithHint: true,
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            width: 2.w,
+                                            color: Colors.black,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(20.sp),
+                                        ),
+                                        label: Text(
+                                          S.of(context).pickup_Address,
+                                          style: TextStyle(
+                                              fontSize: 10.sp,
+                                              color: Colors.black),
+                                        ),
+                                      ),
+                                      keyboardType: TextInputType.text,
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return S
+                                              .of(context)
+                                              .pickup_Address_validator;
+                                        }
+                                        return null;
+                                      },
+                                      style:
+                                          const TextStyle(color: Colors.black),
+                                      controller: pickupAddressController,
                                     ),
                                   ),
                                   SizedBox(
@@ -334,6 +379,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                               userName: userController.text,
                                               brandName:
                                                   brandNameController.text,
+                                              pickupAddress:
+                                                  pickupAddressController.text,
                                               phone: phoneController.text,
                                               password: passController.text,
                                             ).then((value) {
@@ -430,6 +477,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                             email: emailController.text,
                                             userName: userController.text,
                                             brandName: brandNameController.text,
+                                            pickupAddress:
+                                                pickupAddressController.text,
                                             phone: phoneController.text,
                                             password: passController.text,
                                           ).then((value) {
@@ -525,6 +574,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Future<void> createUserUsingEmailAndPassword({
     required String userName,
     required String brandName,
+    required String pickupAddress,
     required String phone,
     required String email,
     required String password,
@@ -546,6 +596,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         'email': email.trim(),
         'userName': userName.trim(),
         'brandName': brandName.trim(),
+        'pickupAddress': pickupAddress.trim(),
         'phone': phone.trim(),
         'password': password.trim(),
         'uId': user.uid,

@@ -1,4 +1,5 @@
 import 'package:delibox/components/const.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../components/cash_helper.dart';
@@ -665,9 +666,9 @@ class _UserScreenState extends State<UserScreen> {
                                         title: S.of(context).log_out,
                                         content:
                                             S.of(context).do_you_want_to_logout,
-                                        onContinue: () {
+                                        onContinue: () async {
+                                      await FirebaseAuth.instance.signOut();
                                       CacheHelper.removeData(key: 'uId');
-
                                       CacheHelper.removeData(key: 'loggedIn');
                                       navigateAndFinish(
                                           context, const LoginScreen());

@@ -4,6 +4,7 @@ class OrderModel {
   int? orderId;
   String? clientName;
   String? clientPhone;
+  String? productName;
   String? picesNumber;
   int? price;
   int? shipingPrice;
@@ -25,6 +26,7 @@ class OrderModel {
     this.clientName,
     this.clientPhone,
     this.picesNumber,
+    this.productName,
     this.price,
     this.shipingPrice,
     this.governorate,
@@ -45,6 +47,7 @@ class OrderModel {
     orderId = json['orderId'];
     clientName = json['clientName'];
     clientPhone = json['clientPhone'];
+    productName = json['productName'];
     picesNumber = json['picesNumber'];
     price = json['price'];
     shipingPrice = json['shipingPrice'];
@@ -67,6 +70,7 @@ class OrderModel {
       'orderId': orderId,
       'clientName': clientName,
       'clientPhone': clientPhone,
+      'productName': productName,
       'picesNumber': picesNumber,
       'price': price,
       'shipingPrice': shipingPrice,
