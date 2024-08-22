@@ -263,7 +263,7 @@ doneAlert(
       width: 350.w,
       titleTextStyle: TextStyle(fontSize: 14.sp));
   dialog.show();
-  Timer(const Duration(seconds: 3), () {
+  Timer(const Duration(seconds: 5), () {
     dialog.dismiss();
   });
 }

@@ -8,7 +8,7 @@ import 'package:delibox/components/components.dart';
 import 'package:delibox/components/const.dart';
 import 'package:flutter/material.dart';
 import '../../generated/l10n.dart';
-import '../BottomNavigationScreens/SearchSreen.dart';
+import '../BottomNavigationScreens/SearchScreen.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {

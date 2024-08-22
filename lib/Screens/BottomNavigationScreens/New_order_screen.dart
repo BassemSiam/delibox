@@ -50,6 +50,9 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
 
   List<String> governorates = [
     'القاهرة',
+    'القاهرة - القاهرة الجديدة و الرحاب',
+    'القاهرة - مدينتى',
+    'القاهرة - الشروق و بدر',
     'الجيزة',
     'الإسكندرية',
     'الإسماعيلية',
@@ -561,7 +564,15 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
 
                           switch (selectedGovernorate) {
                             case == 'القاهرة':
+                              newshipping = 55;
+                            case == 'القاهرة - القاهرة الجديدة و الرحاب':
                               newshipping = 50;
+                              break;
+                            case == 'القاهرة - مدينتى':
+                              newshipping = 60;
+                              break;
+                            case == 'القاهرة - الشروق و بدر':
+                              newshipping = 70;
                               break;
                             case == 'الجيزة':
                               newshipping = 60;

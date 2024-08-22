@@ -122,82 +122,90 @@ class _OrdersAdminState extends State<OrdersAdmin> {
 
                       switch (searchOrder.governorate) {
                         case == 'القاهرة':
+                          newshipping = 55;
+                        case == 'القاهرة - القاهرة الجديدة و الرحاب':
                           newshipping = 50;
+                          break;
+                        case == 'القاهرة - مدينتى':
+                          newshipping = 60;
+                          break;
+                        case == 'القاهرة - الشروق و بدر':
+                          newshipping = 70;
                           break;
                         case == 'الجيزة':
-                          newshipping = 50;
+                          newshipping = 60;
                           break;
                         case == 'الإسكندرية':
-                          newshipping = 60;
+                          newshipping = 70;
                           break;
                         case == 'الإسماعيلية':
-                          newshipping = 60;
+                          newshipping = 65;
                           break;
                         case == 'أسوان':
-                          newshipping = 150;
+                          newshipping = 90;
                           break;
                         case == 'أسيوط':
-                          newshipping = 50;
+                          newshipping = 80;
                           break;
                         case == 'البحر الأحمر':
-                          newshipping = 50;
+                          newshipping = 110;
                           break;
                         case == 'البحيرة':
-                          newshipping = 95;
+                          newshipping = 70;
                           break;
                         case == 'بني سويف':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'بورسعيد':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'جنوب سيناء':
-                          newshipping = 50;
+                          newshipping = 110;
                           break;
                         case == 'الدقهلية':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'دمياط':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'سوهاج':
-                          newshipping = 50;
+                          newshipping = 80;
                           break;
                         case == 'السويس':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'الشرقية':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'شمال سيناء':
-                          newshipping = 50;
+                          newshipping = 110;
                           break;
                         case == 'الغربية':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'الفيوم':
-                          newshipping = 50;
+                          newshipping = 80;
                           break;
                         case == 'القليوبية':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'قنا':
-                          newshipping = 50;
+                          newshipping = 80;
                           break;
                         case == 'كفر الشيخ':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'مطروح':
-                          newshipping = 50;
+                          newshipping = 110;
                           break;
                         case == 'المنوفية':
-                          newshipping = 50;
+                          newshipping = 70;
                           break;
                         case == 'المنيا':
-                          newshipping = 50;
+                          newshipping = 80;
                           break;
                         case == 'الوادي الجديد':
-                          newshipping = 50;
+                          newshipping = 110;
                           break;
                         default:
                           newshipping = 0;

@@ -169,7 +169,15 @@ class _SearchScreenState extends State<SearchScreen> {
 
                                 switch (searchOrder.governorate) {
                                   case == 'القاهرة':
+                                    newshipping = 55;
+                                  case == 'القاهرة - القاهرة الجديدة و الرحاب':
                                     newshipping = 50;
+                                    break;
+                                  case == 'القاهرة - مدينتى':
+                                    newshipping = 60;
+                                    break;
+                                  case == 'القاهرة - الشروق و بدر':
+                                    newshipping = 70;
                                     break;
                                   case == 'الجيزة':
                                     newshipping = 60;
@@ -306,7 +314,9 @@ class _SearchScreenState extends State<SearchScreen> {
                                       ),
                                       Text(
                                         searchOrder.productName!,
-                                        style: TextStyle(fontSize: 12.sp,),
+                                        style: TextStyle(
+                                          fontSize: 12.sp,
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 12.h,
