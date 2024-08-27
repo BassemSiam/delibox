@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Orders_b":
             MessageLookupByLibrary.simpleMessage("تتبع جميع الطلبات والحالة"),
         "Orders_t": MessageLookupByLibrary.simpleMessage("طلبات"),
+        "Price_List": MessageLookupByLibrary.simpleMessage("السعر"),
         "Select_Language":
             MessageLookupByLibrary.simpleMessage(" اختيار اللغة : "),
         "accounting": MessageLookupByLibrary.simpleMessage("تاريخ الطلبات"),

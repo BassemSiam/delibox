@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../generated/l10n.dart';
+import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
+
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
 
@@ -82,7 +84,7 @@ class _SettingScreenState extends State<SettingScreen> {
                           await CacheHelper.saveData(key: 'lang', value: 'ENG');
                           navigateAndFinish(
                               context,
-                              MyApp(
+                              const MyApp(
                                 selectLan: 'en',
                               ));
 
@@ -115,7 +117,7 @@ class _SettingScreenState extends State<SettingScreen> {
                           await CacheHelper.saveData(key: 'lang', value: 'AR');
                           navigateAndFinish(
                               context,
-                              MyApp(
+                              const MyApp(
                                 selectLan: 'ar',
                               ));
 
@@ -137,39 +139,47 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
             ),
             ElevatedButton(
-                onPressed: () {
-                  // PDF(
-                  //   enableSwipe: true,
-                  //   swipeHorizontal: true,
-                  //   autoSpacing: false,
-                  //   pageFling: false,
-                  //   onError: (error) {
-                  //     print(error.toString());
-                  //   },
-                  //   onPageError: (page, error) {
-                  //     print('$page: ${error.toString()}');
-                  //   },
-                  //   onPageChanged: (int page, int total) {
-                  //     print('page change: $page/$total');
-                  //   },
-                  // ).fromAsset('assets/pdf/file-example.pdf');
-                },
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Price',
-                      style: TextStyle(color: Colors.black),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Scaffold(
+                      appBar: AppBar(
+                        title: Text(S.of(context).Price_List),
+                      ),
+                      body: PDF(
+                        enableSwipe: true,
+                        swipeHorizontal: true,
+                        autoSpacing: false,
+                        pageFling: false,
+                        onError: (error) {
+                          print(error.toString());
+                        },
+                        onPageError: (page, error) {
+                          print('$page: ${error.toString()}');
+                        },
+                      ).fromAsset('assets/images/Price_list.pdf'),
                     ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Icon(
-                      Icons.picture_as_pdf,
-                      color: Colors.red,
-                    )
-                  ],
-                )),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    S.of(context).Price_List,
+                    style: const TextStyle(color: Colors.black),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Icon(
+                    Icons.picture_as_pdf,
+                    color: Colors.red,
+                  )
+                ],
+              ),
+            ),
             const Spacer(),
             Text(
               S.of(context).contact_us_t,
@@ -205,7 +215,7 @@ class _SettingScreenState extends State<SettingScreen> {
                               Uri.parse('https://www.facebook.com/deliiboxx'));
                         },
                         icon: FaIcon(FontAwesomeIcons.facebook,
-                            color: Color.fromARGB(255, 14, 72, 172),
+                            color: const Color.fromARGB(255, 14, 72, 172),
                             size: 25.sp),
                       ),
                       IconButton(
@@ -238,7 +248,7 @@ class _SettingScreenState extends State<SettingScreen> {
                               Uri.parse('https://www.facebook.com/deliiboxx'));
                         },
                         icon: FaIcon(FontAwesomeIcons.facebook,
-                            color: Color.fromARGB(255, 14, 72, 172),
+                            color: const Color.fromARGB(255, 14, 72, 172),
                             size: 25.sp),
                       ),
                       IconButton(

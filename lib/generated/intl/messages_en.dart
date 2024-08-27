@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Orders_b":
             MessageLookupByLibrary.simpleMessage("track all orders and status"),
         "Orders_t": MessageLookupByLibrary.simpleMessage("Orders"),
+        "Price_List": MessageLookupByLibrary.simpleMessage("Price List"),
         "Select_Language":
             MessageLookupByLibrary.simpleMessage("Select Language : "),
         "accounting": MessageLookupByLibrary.simpleMessage("Orders history"),

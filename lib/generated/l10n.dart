@@ -1219,6 +1219,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Price List`
+  String get Price_List {
+    return Intl.message(
+      'Price List',
+      name: 'Price_List',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

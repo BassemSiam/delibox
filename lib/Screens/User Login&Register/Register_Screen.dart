@@ -310,7 +310,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                     width:
                                         MediaQuery.of(context).size.width / 1.1,
                                     child: TextFormField(
-                                      textDirection: TextDirection.ltr,
+                                      textDirection: TextDirection.rtl,
                                       inputFormatters: [
                                         FilteringTextInputFormatter.deny(
                                             RegExp(r'\s'))
@@ -335,7 +335,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           style: TextStyle(
                                               fontSize: 10.sp,
                                               color: Colors.black),
-                                          textDirection: TextDirection.rtl,
                                         ),
                                       ),
                                       keyboardType: TextInputType.emailAddress,

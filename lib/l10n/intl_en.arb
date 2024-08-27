@@ -154,5 +154,6 @@
 
     "Select_Language" : "Select Language : ",
     "error_network" : "There is a problem with the Internet , try again later",
-    "ok" : "Ok"
+    "ok" : "Ok",
+    "Price_List" : "Price List"
 }
