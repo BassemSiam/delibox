@@ -24,9 +24,9 @@ void main() async {
   var language = await CacheHelper.getData(key: 'lang');
 
   print(language);
-  NotificationsHelper notificationsHelper = NotificationsHelper();
-  await notificationsHelper.initNotifications();
-  String? accesstoken = await notificationsHelper.getAccessToken();
+  // NotificationsHelper notificationsHelper = NotificationsHelper();
+  // await notificationsHelper.initNotifications();
+  // String? accesstoken = await notificationsHelper.getAccessToken();
 
 
 
