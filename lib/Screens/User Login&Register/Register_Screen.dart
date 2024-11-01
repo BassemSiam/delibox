@@ -310,12 +310,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                     width:
                                         MediaQuery.of(context).size.width / 1.1,
                                     child: TextFormField(
-                                      textDirection: TextDirection.rtl,
+                                      textDirection: TextDirection.ltr,
                                       inputFormatters: [
                                         FilteringTextInputFormatter.deny(
                                             RegExp(r'\s'))
                                       ],
-                                      textAlign: TextAlign.end,
+                                      textAlign: TextAlign.start,
                                       decoration: InputDecoration(
                                         suffixIcon: Icon(
                                           Icons.email_rounded,

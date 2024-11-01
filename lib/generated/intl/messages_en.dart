@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Price_List": MessageLookupByLibrary.simpleMessage("Price List"),
         "Select_Language":
             MessageLookupByLibrary.simpleMessage("Select Language : "),
+        "account_deleted_successfully": MessageLookupByLibrary.simpleMessage(
+            "You have successfully delete your account"),
         "accounting": MessageLookupByLibrary.simpleMessage("Orders history"),
         "add_accountin_order":
             MessageLookupByLibrary.simpleMessage("Add New Orders"),
@@ -79,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "The order code has been copied"),
         "comments_chose":
             MessageLookupByLibrary.simpleMessage("Notes (optional)"),
+        "confirm_delete_account": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete your account ?"),
         "contact_us_b": MessageLookupByLibrary.simpleMessage(
             "you can change the langauge of the app and you can contact us anytime"),
         "contact_us_t": MessageLookupByLibrary.simpleMessage("Contact us"),
@@ -110,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("This email is incorrect"),
         "email_validator":
             MessageLookupByLibrary.simpleMessage("You must enter an email"),
+        "error_deleting_account":
+            MessageLookupByLibrary.simpleMessage("There are error try again"),
         "error_network": MessageLookupByLibrary.simpleMessage(
             "There is a problem with the Internet , try again later"),
         "filter_by_governorate": MessageLookupByLibrary.simpleMessage(

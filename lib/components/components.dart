@@ -1,15 +1,20 @@
 import 'dart:async';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:delibox/Screens/User%20Login&Register/Login_screen.dart';
 import 'package:delibox/components/cash_helper.dart';
 import 'package:delibox/components/const.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:lottie/lottie.dart';
 import '../generated/l10n.dart';
 import '../main.dart';
 import 'package:intl/intl.dart';
+
 class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key, required this.buttonText, required this.onClick});
@@ -355,6 +360,92 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
 
 bool isArabic() {
   return Intl.getCurrentLocale() == 'ar';
+}
+
+void showConfirmationDialog(BuildContext context) {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text(S.of(context).confirm_delete_account),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextField(
+              controller: emailController,
+              decoration: InputDecoration(labelText: S.of(context).email),
+            ),
+            TextField(
+              controller: passwordController,
+              decoration: InputDecoration(labelText: S.of(context).password),
+              obscureText: true,
+            ),
+          ],
+        ),
+        actions: <Widget>[
+          TextButton(
+            child: Text(S.of(context).delete),
+            onPressed: () async {
+              try {
+                User? user = FirebaseAuth.instance.currentUser;
+                AuthCredential credential = EmailAuthProvider.credential(
+                  email: emailController.text,
+                  password: passwordController.text,
+                );
+
+                // Re-authenticate the user
+                await user?.reauthenticateWithCredential(credential);
+                await user?.delete();
+
+                // Delete user document from Firestore
+                if (user != null) {
+                  await FirebaseFirestore.instance
+                      .collection(
+                          'users') // Replace 'users' with your collection name
+                      .doc(user.uid) // Use the user's UID as the document ID
+                      .delete();
+                }
+
+                // Handle account deleted successfully
+                CacheHelper.removeData(key: 'uId');
+                CacheHelper.removeData(key: 'loggedIn');
+
+                // Navigate to login screen
+
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
+                showToast(
+                    text: S.of(context).account_deleted_successfully,
+                    state: ToastStates.success);
+              } on FirebaseAuthException catch (e) {
+                // Handle account deletion error
+                print('Error deleting account: $e');
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text(S.of(context).error_deleting_account)),
+                );
+              } catch (e) {
+                // Handle Firestore deletion error
+                print('Error deleting Firestore document: $e');
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Icon(Icons.error)),
+                );
+              }
+            },
+          ),
+          TextButton(
+            child: Text(S.of(context).cancel),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );
 }
 
 // final pound = Currency.create('EGP', 2,

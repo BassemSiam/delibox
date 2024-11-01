@@ -155,5 +155,9 @@
     "Select_Language" : "Select Language : ",
     "error_network" : "There is a problem with the Internet , try again later",
     "ok" : "Ok",
-    "Price_List" : "Price List"
+    "Price_List" : "Price List",
+
+    "confirm_delete_account":"Are you sure you want to delete your account ?",
+    "account_deleted_successfully" : "You have successfully delete your account",
+    "error_deleting_account" : "There are error try again"
 }

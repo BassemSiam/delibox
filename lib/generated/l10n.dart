@@ -1229,6 +1229,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Are you sure you want to delete your account ?`
+  String get confirm_delete_account {
+    return Intl.message(
+      'Are you sure you want to delete your account ?',
+      name: 'confirm_delete_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have successfully delete your account`
+  String get account_deleted_successfully {
+    return Intl.message(
+      'You have successfully delete your account',
+      name: 'account_deleted_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There are error try again`
+  String get error_deleting_account {
+    return Intl.message(
+      'There are error try again',
+      name: 'error_deleting_account',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

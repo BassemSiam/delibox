@@ -156,18 +156,22 @@ class _UserScreenState extends State<UserScreen> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Center(
-                                      child: Text(
-                                        model!.userName
-                                            .toString()
-                                            .toUpperCase()
-                                            .trim(),
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18.sp,
-                                          fontWeight: FontWeight.bold,
+                                    SizedBox(
+                                      width:
+                                          MediaQuery.sizeOf(context).width - 20,
+                                      child: Center(
+                                        child: Text(
+                                          model!.userName
+                                              .toString()
+                                              .toUpperCase()
+                                              .trim(),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18.sp,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
                                     ),

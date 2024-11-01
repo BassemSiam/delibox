@@ -153,7 +153,11 @@
     "Select_Language" : " اختيار اللغة : ",
     "error_network" : "يوجد مشكلة فى الانترنت , حاول فى وقت لاحق",
     "ok" : "نعم",
-    "Price_List" : "السعر"
+    "Price_List" : "السعر",
+
+    "confirm_delete_account":"هل أنت متأكد أنك تريد حذف حسابك ؟",
+    "account_deleted_successfully" : "لقد قمت بحذف حسابك بنجاح",
+    "error_deleting_account" : "هناك خطأ حاول مرة أخرى"
 
 
 

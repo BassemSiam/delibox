@@ -43,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Price_List": MessageLookupByLibrary.simpleMessage("السعر"),
         "Select_Language":
             MessageLookupByLibrary.simpleMessage(" اختيار اللغة : "),
+        "account_deleted_successfully":
+            MessageLookupByLibrary.simpleMessage("لقد قمت بحذف حسابك بنجاح"),
         "accounting": MessageLookupByLibrary.simpleMessage("تاريخ الطلبات"),
         "add_accountin_order":
             MessageLookupByLibrary.simpleMessage("اضف طلب جديد"),
@@ -77,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "code_copy": MessageLookupByLibrary.simpleMessage("تم نسخ كود الطلب"),
         "comments_chose":
             MessageLookupByLibrary.simpleMessage("ملاحظات (اختيــــارى)"),
+        "confirm_delete_account": MessageLookupByLibrary.simpleMessage(
+            "هل أنت متأكد أنك تريد حذف حسابك ؟"),
         "contact_us_b": MessageLookupByLibrary.simpleMessage(
             "يمكنك تغيير لغة التطبيق ويمكنك الاتصال بنا في أي وقت"),
         "contact_us_t": MessageLookupByLibrary.simpleMessage("تواصل بنا"),
@@ -105,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "هذا البريد الالكترونى غير صحيح"),
         "email_validator":
             MessageLookupByLibrary.simpleMessage("يجب ادخال البريد الالكترونى"),
+        "error_deleting_account":
+            MessageLookupByLibrary.simpleMessage("هناك خطأ حاول مرة أخرى"),
         "error_network": MessageLookupByLibrary.simpleMessage(
             "يوجد مشكلة فى الانترنت , حاول فى وقت لاحق"),
         "filter_by_governorate":
